@@ -1,0 +1,19 @@
+name = "ceves-todo"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# R2 bucket for event storage
+[[r2_buckets]]
+binding = "EVENTS_BUCKET"
+bucket_name = "ceves-todo-events"
+preview_bucket_name = "ceves-todo-events-preview"
+
+# Durable Object binding for todo lists
+[[durable_objects.bindings]]
+name = "TODO_LIST"
+class_name = "TodoListAggregate"
+
+# Durable Object migrations
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TodoListAggregate"]

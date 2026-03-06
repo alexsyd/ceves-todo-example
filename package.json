@@ -1,0 +1,22 @@
+{
+  "name": "ceves-todo-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Todo List example built with Ceves event sourcing framework",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "ceves": "^0.1.0",
+    "chanfana": "^2.8.3",
+    "hono": "^4.10.6",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^3.95.0"
+  }
+}
