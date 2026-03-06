@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { defineCommand, BaseState } from 'ceves';
+import { BaseState } from 'ceves';
 
 /**
  * TodoListState - Current state of a todo list aggregate
@@ -17,25 +17,25 @@ export interface TodoItem {
 }
 
 /**
- * Commands
+ * Request body schemas for route validation
  */
-export const CreateListCommandSchema = defineCommand('CreateList', {
+export const CreateListBodySchema = z.object({
   title: z.string().min(1, 'Title is required'),
 });
 
-export const AddItemCommandSchema = defineCommand('AddItem', {
+export const AddItemBodySchema = z.object({
   text: z.string().min(1, 'Item text is required'),
 });
 
-export const CompleteItemCommandSchema = defineCommand('CompleteItem', {
+export const CompleteItemBodySchema = z.object({
   itemId: z.string().min(1, 'Item ID is required'),
 });
 
-export const DeleteItemCommandSchema = defineCommand('DeleteItem', {
+export const DeleteItemBodySchema = z.object({
   itemId: z.string().min(1, 'Item ID is required'),
 });
 
-export type CreateListCommand = z.infer<typeof CreateListCommandSchema>;
-export type AddItemCommand = z.infer<typeof AddItemCommandSchema>;
-export type CompleteItemCommand = z.infer<typeof CompleteItemCommandSchema>;
-export type DeleteItemCommand = z.infer<typeof DeleteItemCommandSchema>;
+export type CreateListBody = z.infer<typeof CreateListBodySchema>;
+export type AddItemBody = z.infer<typeof AddItemBodySchema>;
+export type CompleteItemBody = z.infer<typeof CompleteItemBodySchema>;
+export type DeleteItemBody = z.infer<typeof DeleteItemBodySchema>;

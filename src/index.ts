@@ -8,7 +8,14 @@
 import { createRouter } from 'ceves';
 import { TodoListAggregate } from './aggregates/TodoListAggregate';
 
-// Import event handlers to trigger decorator registration
+// Import routes to trigger @Route decorator registration
+import './routes/CreateListRoute';
+import './routes/AddItemRoute';
+import './routes/CompleteItemRoute';
+import './routes/DeleteItemRoute';
+import './routes/GetListRoute';
+
+// Import event handlers to trigger @EventHandler decorator registration
 import './events/ListCreatedHandler';
 import './events/ItemAddedHandler';
 import './events/ItemCompletedHandler';
