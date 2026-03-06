@@ -9,7 +9,7 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "ceves": "^0.1.0",
+    "@sydorenkoalex/ceves": "^0.1.0",
     "chanfana": "^2.8.3",
     "hono": "^4.10.6",
     "zod": "^3.25.76"

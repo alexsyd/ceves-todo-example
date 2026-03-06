@@ -1,4 +1,4 @@
-import { Route, CommandRoute } from 'ceves';
+import { Route, CommandRoute } from '@sydorenkoalex/ceves';
 import { CompleteItemBodySchema, type CompleteItemBody, type TodoListState } from '../types';
 import { ItemCompletedEvent } from '../events/ItemCompletedEvent';
 

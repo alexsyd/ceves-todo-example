@@ -1,4 +1,4 @@
-import type { DomainEvent } from 'ceves';
+import type { DomainEvent } from '@sydorenkoalex/ceves';
 
 export class ListCreatedEvent implements DomainEvent {
   readonly type = 'ListCreated' as const;

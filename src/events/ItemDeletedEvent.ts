@@ -1,4 +1,4 @@
-import type { DomainEvent } from 'ceves';
+import type { DomainEvent } from '@sydorenkoalex/ceves';
 
 export class ItemDeletedEvent implements DomainEvent {
   readonly type = 'ItemDeleted' as const;

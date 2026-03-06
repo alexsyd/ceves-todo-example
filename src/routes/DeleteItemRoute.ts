@@ -1,4 +1,4 @@
-import { Route, CommandRoute } from 'ceves';
+import { Route, CommandRoute } from '@sydorenkoalex/ceves';
 import { DeleteItemBodySchema, type DeleteItemBody, type TodoListState } from '../types';
 import { ItemDeletedEvent } from '../events/ItemDeletedEvent';
 

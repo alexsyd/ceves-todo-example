@@ -1,4 +1,4 @@
-import type { DomainEvent } from 'ceves';
+import type { DomainEvent } from '@sydorenkoalex/ceves';
 
 export class ItemCompletedEvent implements DomainEvent {
   readonly type = 'ItemCompleted' as const;

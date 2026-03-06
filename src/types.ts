@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { BaseState } from 'ceves';
+import { BaseState } from '@sydorenkoalex/ceves';
 
 /**
  * TodoListState - Current state of a todo list aggregate

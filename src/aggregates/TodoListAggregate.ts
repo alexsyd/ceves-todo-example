@@ -1,4 +1,4 @@
-import { AggregateObject } from 'ceves';
+import { AggregateObject } from '@sydorenkoalex/ceves';
 import { TodoListState } from '../types';
 import type { DurableObjectState } from '@cloudflare/workers-types';
 

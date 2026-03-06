@@ -1,4 +1,4 @@
-import { EventHandler, type IEventHandler, type EventMetadata } from 'ceves';
+import { EventHandler, type IEventHandler, type EventMetadata } from '@sydorenkoalex/ceves';
 import type { TodoListState } from '../types';
 import { ItemAddedEvent } from './ItemAddedEvent';
 

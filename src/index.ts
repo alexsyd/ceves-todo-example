@@ -5,7 +5,7 @@
  * Demonstrates event sourcing with Durable Objects.
  */
 
-import { createRouter } from 'ceves';
+import { createRouter } from '@sydorenkoalex/ceves';
 import { TodoListAggregate } from './aggregates/TodoListAggregate';
 
 // Import routes to trigger @Route decorator registration

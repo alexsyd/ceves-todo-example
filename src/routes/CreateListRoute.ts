@@ -1,4 +1,4 @@
-import { Route, CreateCommandRoute } from 'ceves';
+import { Route, CreateCommandRoute } from '@sydorenkoalex/ceves';
 import { CreateListBodySchema, type CreateListBody, type TodoListState } from '../types';
 import { ListCreatedEvent } from '../events/ListCreatedEvent';
 

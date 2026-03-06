@@ -1,4 +1,4 @@
-import { Route, QueryRoute } from 'ceves';
+import { Route, QueryRoute } from '@sydorenkoalex/ceves';
 import type { TodoListState } from '../types';
 
 @Route({ method: 'GET', path: '/lists/:id' })
