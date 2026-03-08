@@ -5,21 +5,9 @@
  * Demonstrates event sourcing with Durable Objects.
  */
 
+import './_discover.generated';
 import { createRouter } from '@sydorenkoalex/ceves';
 import { TodoListAggregate } from './aggregates/TodoListAggregate';
-
-// Import routes to trigger @Route decorator registration
-import './routes/CreateListRoute';
-import './routes/AddItemRoute';
-import './routes/CompleteItemRoute';
-import './routes/DeleteItemRoute';
-import './routes/GetListRoute';
-
-// Import event handlers to trigger @EventHandler decorator registration
-import './events/ListCreatedHandler';
-import './events/ItemAddedHandler';
-import './events/ItemCompletedHandler';
-import './events/ItemDeletedHandler';
 
 // Export Durable Object class
 export { TodoListAggregate };
@@ -31,6 +19,7 @@ const app = createRouter({
     version: '1.0.0',
     description: 'Event-sourced Todo List built with Ceves',
   },
+  discover: ['./routes/**/*.ts', './events/**/*.ts'],
 });
 
 export default app;
