@@ -1,5 +1,5 @@
 import { EventHandler, type IEventHandler, type EventMetadata } from '@sydorenkoalex/ceves';
-import type { TodoListState } from '../types';
+import type { TodoListState } from '../aggregates/TodoListAggregate';
 import { ListCreatedEvent } from './ListCreatedEvent';
 
 @EventHandler

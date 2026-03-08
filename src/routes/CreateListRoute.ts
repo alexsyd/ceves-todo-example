@@ -1,6 +1,13 @@
+import { z } from 'zod';
 import { Route, CreateCommandRoute } from '@sydorenkoalex/ceves';
-import { CreateListBodySchema, type CreateListBody, type TodoListState } from '../types';
+import type { TodoListState } from '../aggregates/TodoListAggregate';
 import { ListCreatedEvent } from '../events/ListCreatedEvent';
+
+const CreateListBodySchema = z.object({
+  title: z.string().min(1, 'Title is required'),
+});
+
+type CreateListBody = z.infer<typeof CreateListBodySchema>;
 
 @Route({ method: 'POST', path: '/lists/:id' })
 export class CreateListRoute extends CreateCommandRoute<CreateListBody, TodoListState, ListCreatedEvent> {

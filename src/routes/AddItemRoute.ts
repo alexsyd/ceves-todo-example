@@ -1,6 +1,13 @@
+import { z } from 'zod';
 import { Route, CommandRoute } from '@sydorenkoalex/ceves';
-import { AddItemBodySchema, type AddItemBody, type TodoListState } from '../types';
+import type { TodoListState } from '../aggregates/TodoListAggregate';
 import { ItemAddedEvent } from '../events/ItemAddedEvent';
+
+const AddItemBodySchema = z.object({
+  text: z.string().min(1, 'Item text is required'),
+});
+
+type AddItemBody = z.infer<typeof AddItemBodySchema>;
 
 @Route({ method: 'POST', path: '/lists/:id/items' })
 export class AddItemRoute extends CommandRoute<AddItemBody, TodoListState, ItemAddedEvent> {
